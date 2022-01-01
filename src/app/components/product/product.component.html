@@ -1,0 +1,24 @@
+
+<div *ngIf = "dataloaded == false" class="spinner-grow text-dark text-center" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+<table *ngIf = "dataloaded == true" class = "table">
+    
+    <thead>
+        <th>Id</th>
+        <th>Ürün Adı</th>
+        <th>Ürün Fiyatı</th>
+        <th>Ürün Stoğu</th>
+
+
+    </thead>
+    <tr *ngFor="let product of products">
+        <td>{{product.productId}}</td>
+        <td>{{product.productName}}</td>
+        <td>{{product.unitPrice}}</td>
+        <td>{{product.unitsInStock}}</td>
+
+       
+
+    </tr>
+</table>
